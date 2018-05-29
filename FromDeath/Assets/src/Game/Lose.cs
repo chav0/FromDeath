@@ -9,7 +9,9 @@ public class Lose : MonoBehaviour {
     [SerializeField]
     private LoseWindow _loseWindow;
     [SerializeField]
-    private GameObject _gameController; 
+    private GameObject _gameController;
+    [SerializeField]
+    private GameObject _gameGenerator;
 
     public void Save()
     {
@@ -28,7 +30,8 @@ public class Lose : MonoBehaviour {
             Save(); 
             _loseWindow.SetCurrentScore((int)Mathf.Round(_camera.position.y)); 
             _loseWindow.gameObject.SetActive(true);
-            _gameController.SetActive(false); 
+            _gameController.SetActive(false);
+            _gameGenerator.SetActive(false); 
         }
     }
 }

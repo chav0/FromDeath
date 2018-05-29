@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour {
     [SerializeField]
     private GameObject _gameController;
     [SerializeField]
+    private GameObject _gameGenerator; 
+    [SerializeField]
     private Text _bestScore; 
 
     private void Awake()
@@ -22,7 +24,8 @@ public class MainMenu : MonoBehaviour {
     public void SetActive(bool _flag)
     {
         gameObject.SetActive(_flag);
-        _gameController.SetActive(!_flag); 
+        _gameController.SetActive(!_flag);
+        _gameGenerator.SetActive(!_flag); 
     }
 
     public void Close()
